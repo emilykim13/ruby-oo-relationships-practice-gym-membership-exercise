@@ -49,4 +49,5 @@ class Lifter
     Membership.new(cost, gym, self)
   end
 
+  
 end
