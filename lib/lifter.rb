@@ -36,9 +36,9 @@ class Lifter
   # i dont even wanna try to explain this one. tbh im being extra by using .inject
 
     # here's a much easier and user-friendly method that does the exact same thing
-  # def self.average_lift_total
-  #   @@all.sum{|lifter|  lifter.lift_total.to_f}/@@all.size.to_f
-  # end
+  def self.average_lift_total
+    @@all.sum{|lifter|  lifter.lift_total.to_f}/@@all.size.to_f
+  end
 
   def gyms_cost # >>>Get the total cost of a specific lifter's gym memberships<<<
     cost_array = self.memberships.map {|object| object.cost}
@@ -49,5 +49,5 @@ class Lifter
     Membership.new(cost, gym, self)
   end
 
-  
+
 end
